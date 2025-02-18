@@ -1,0 +1,11 @@
+<h1>Portfolio</h1>
+
+<% @portfolio_items.each do |portfolio_item| %>
+    <p><%= link_to portfolio_item.title, portfolio_show_path(portfolio_item)%></p>
+    <p><%= link_to 'Delete Post', portfolio_path(portfolio_item.id), data: { turbo_method: :delete, turbo_confirm: 'Are You Sure?' } %>
+    <p><%= link_to 'Show Post', portfolio_path(portfolio_item.id) %></p>
+    <p><%= link_to 'Edit Post', portfolio_path(portfolio_item.id) %></p>
+
+</p>
+    
+<% end%>
